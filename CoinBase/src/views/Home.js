@@ -2,6 +2,8 @@ import React from "react";
 import { Text, View, StyleSheet, SafeAreaView, StatusBar } from "react-native";
 import AntDesign from "@expo/vector-icons/AntDesign";
 
+import AddGasto from "../components/AddGasto";
+
 export default (props) => {
   return (
     <SafeAreaView>
@@ -40,6 +42,7 @@ export default (props) => {
             <Text style={{ color: "#f0f0f0" }}>R$300,00</Text>
           </View>
         </View>
+        <AddGasto />
       </View>
       <StatusBar style="auto" />
     </SafeAreaView>

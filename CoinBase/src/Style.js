@@ -1,7 +1,7 @@
 const colors = {
   white: "#fff",
-  black: "#000",
-  blue: "#007bff",
+  black: "#0D1B34",
+  blue: "#1652F0",
 };
 
 const style = {
