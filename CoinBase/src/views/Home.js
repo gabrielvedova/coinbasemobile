@@ -3,6 +3,7 @@ import { Text, View, StyleSheet, SafeAreaView, StatusBar } from "react-native";
 import AntDesign from "@expo/vector-icons/AntDesign";
 
 import AddGasto from "../components/AddGasto";
+import style from "../Style";
 
 export default (props) => {
   return (
@@ -24,10 +25,10 @@ export default (props) => {
               ...styles.expensesWeekDiv,
               paddingBottom: 15,
               borderBottomWidth: 1,
-              borderBottomColor: "#808080",
+              borderBottomColor: style.colors.white,
             }}
           >
-            <Text style={{ fontSize: 18, color: "#f0f0f0" }}>
+            <Text style={{ fontSize: 18, color: style.colors.white }}>
               Gastos da semana
             </Text>
             <AntDesign name="right" color="#f0f0f0" size={32} />
@@ -38,8 +39,8 @@ export default (props) => {
               marginTop: 10,
             }}
           >
-            <Text style={{ color: "#f0f0f0" }}>15 de fevereiro</Text>
-            <Text style={{ color: "#f0f0f0" }}>R$300,00</Text>
+            <Text style={{ color: style.colors.white }}>15 de fevereiro</Text>
+            <Text style={{ color: style.colors.white }}>R$300,00</Text>
           </View>
         </View>
         <AddGasto />
@@ -56,6 +57,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     paddingTop: 10,
+    marginBottom: 40,
   },
   textmenu: {
     fontSize: 20,
@@ -64,7 +66,6 @@ const styles = StyleSheet.create({
     flex: 4,
     backgroundColor: "#fff",
     alignItems: "center",
-    justifyContent: "center",
   },
   perfil: {
     height: "80%",
@@ -76,7 +77,7 @@ const styles = StyleSheet.create({
   },
   expensesWeek: {
     width: "90%",
-    backgroundColor: "#0000ff",
+    backgroundColor: style.colors.blue,
     borderRadius: 20,
     padding: 10,
   },

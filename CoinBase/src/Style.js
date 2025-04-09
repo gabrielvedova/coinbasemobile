@@ -30,4 +30,4 @@ const style = {
   },
 };
 
-export default style;
+export default { colors, style };

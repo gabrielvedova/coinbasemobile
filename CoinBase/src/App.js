@@ -13,6 +13,5 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
-  container: style.container,
-  title: style.title,
+  container: style.style.container,
 });
