@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, SafeAreaView } from "react-native";
 
 import style from "./Style";
 import Home from "./views/Home";
+import Digitarvalor from "./views/Digitarvalor"; 
 
 export default function App() {
   return (
