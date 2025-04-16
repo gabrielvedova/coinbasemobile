@@ -1,5 +1,12 @@
 import React from "react";
-import { Text, View, StyleSheet, SafeAreaView, StatusBar } from "react-native";
+import {
+  Text,
+  View,
+  StyleSheet,
+  SafeAreaView,
+  StatusBar,
+  TouchableOpacity,
+} from "react-native";
 import AntDesign from "@expo/vector-icons/AntDesign";
 
 import AddGasto from "../components/AddGasto";
@@ -19,7 +26,7 @@ export default (props) => {
 
       {/* HOME */}
       <View style={styles.home}>
-        <View style={styles.expensesWeek}>
+        <TouchableOpacity style={styles.expensesWeek}>
           <View
             style={{
               ...styles.expensesWeekDiv,
@@ -42,7 +49,7 @@ export default (props) => {
             <Text style={{ color: style.colors.white }}>15 de fevereiro</Text>
             <Text style={{ color: style.colors.white }}>R$300,00</Text>
           </View>
-        </View>
+        </TouchableOpacity>
         <AddGasto />
       </View>
       <StatusBar style="auto" />
