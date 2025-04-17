@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "title": "Coxinha Grande",
+    "description": "Coxinha Grande com catupiry",
+    "price": 10.0,
+    "date": "2025-03-25",
+    "typePayment": "Cartão 1",
+    "category": "Food"
+  },
+  {
+    "id": 2,
+    "title": "Corrida de Uber",
+    "description": "Corrida curta até o aeroporto",
+    "price": 25.0,
+    "date": "2025-04-06",
+    "typePayment": "Dinheiro",
+    "category": "Transport"
+  },
+  {
+    "id": 3,
+    "title": "Pizza",
+    "description": "Pizza de Calabresa",
+    "price": 30.0,
+    "date": "2025-04-14",
+    "typePayment": "Pix Nubank",
+    "category": "Food"
+  },
+  {
+    "id": 4,
+    "title": "Manutenção de Bicicleta",
+    "description": "Troca de pneus e ajustes gerais",
+    "price": 50.0,
+    "date": "2025-04-17",
+    "typePayment": "Cartão 1",
+    "category": "Transport"
+  },
+  {
+    "id": 5,
+    "title": "Hamburguer",
+    "description": "Hamburguer com queijo e bacon",
+    "price": 15.0,
+    "date": "2025-04-17",
+    "typePayment": "Cartão 2",
+    "category": "Food"
+  },
+  {
+    "id": 6,
+    "title": "Cerveja",
+    "description": "Cerveja artesanal",
+    "price": 12.0,
+    "date": "2025-04-18",
+    "typePayment": "Cartão 2",
+    "category": "Food"
+  },
+  {
+    "id": 7,
+    "title": "Gasolina",
+    "description": "Abastecimento do carro",
+    "price": 100.0,
+    "date": "2025-04-20",
+    "typePayment": "Dinheiro",
+    "category": "Transport"
+  },
+  {
+    "id": 8,
+    "title": "Cinema",
+    "description": "Ingressos para o cinema",
+    "price": 40.0,
+    "date": "2025-04-22",
+    "typePayment": "Cartão 1",
+    "category": "Entertainment"
+  },
+  {
+    "id": 9,
+    "title": "Livros",
+    "description": "Livros de programação",
+    "price": 80.0,
+    "date": "2025-04-25",
+    "typePayment": "Cartão 2",
+    "category": "Education"
+  },
+  {
+    "id": 10,
+    "title": "Assinatura Netflix",
+    "description": "Mensalidade da Netflix",
+    "price": 45.0,
+    "date": "2025-04-28",
+    "typePayment": "Cartão 1",
+    "category": "Entertainment"
+  },
+  {
+    "id": 11,
+    "title": "Curso de Programação",
+    "description": "Curso online de programação",
+    "price": 200.0,
+    "date": "2025-05-01",
+    "typePayment": "Cartão 2",
+    "category": "Education"
+  },
+  {
+    "id": 12,
+    "title": "Jantar em Restaurante",
+    "description": "Jantar em um restaurante italiano",
+    "price": 120.0,
+    "date": "2025-05-03",
+    "typePayment": "Dinheiro",
+    "category": "Food"
+  }
+]

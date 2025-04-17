@@ -13,11 +13,12 @@ import style from "../Style";
 import ButtonExpensesWeek from "../components/Home/ButtonExpensesWeek";
 import AddSpent from "../components/Home/AddSpent";
 import FindSpent from "../components/Home/FindSpent";
+import ListRecentsExpenses from "../components/Home/ListRecentsExpenses";
 
 export default (props) => {
   return (
-    <SafeAreaView>
-      {/* MENU */}
+    <SafeAreaView style={{ flex: 1 }}>
+      {/* HEADER */}
       <View style={styles.menu}>
         <View style={{ width: "50%" }}>
           <Text style={{ fontSize: 18, color: "#808080" }}>Olá,</Text>
@@ -32,6 +33,8 @@ export default (props) => {
           <ButtonExpensesWeek />
         </TouchableOpacity>
         <FindSpent />
+        <Text>Gastos Recentes:</Text>
+        <ListRecentsExpenses />
       </View>
       <View style={styles.ButtonNewSpent}>
         <AddSpent />
@@ -57,6 +60,7 @@ const styles = StyleSheet.create({
     flex: 4,
     backgroundColor: "#fff",
     alignItems: "center",
+    height: "100%",
   },
   perfil: {
     height: "80%",
