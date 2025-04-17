@@ -7,10 +7,12 @@ import {
   StatusBar,
   TouchableOpacity,
 } from "react-native";
-import AntDesign from "@expo/vector-icons/AntDesign";
 
-import AddGasto from "../components/AddGasto";
+import AddGasto from "../components/Home/AddSpent";
 import style from "../Style";
+import ButtonExpensesWeek from "../components/Home/ButtonExpensesWeek";
+import AddSpent from "../components/Home/AddSpent";
+import FindSpent from "../components/Home/FindSpent";
 
 export default (props) => {
   return (
@@ -27,30 +29,12 @@ export default (props) => {
       {/* HOME */}
       <View style={styles.home}>
         <TouchableOpacity style={styles.expensesWeek}>
-          <View
-            style={{
-              ...styles.expensesWeekDiv,
-              paddingBottom: 15,
-              borderBottomWidth: 1,
-              borderBottomColor: style.colors.white,
-            }}
-          >
-            <Text style={{ fontSize: 18, color: style.colors.white }}>
-              Gastos da semana
-            </Text>
-            <AntDesign name="right" color="#f0f0f0" size={32} />
-          </View>
-          <View
-            style={{
-              ...styles.expensesWeekDiv,
-              marginTop: 10,
-            }}
-          >
-            <Text style={{ color: style.colors.white }}>15 de fevereiro</Text>
-            <Text style={{ color: style.colors.white }}>R$300,00</Text>
-          </View>
+          <ButtonExpensesWeek />
         </TouchableOpacity>
-        <AddGasto />
+        <FindSpent />
+      </View>
+      <View style={styles.ButtonNewSpent}>
+        <AddSpent />
       </View>
       <StatusBar style="auto" />
     </SafeAreaView>
@@ -84,13 +68,16 @@ const styles = StyleSheet.create({
   },
   expensesWeek: {
     width: "90%",
+    height: 150,
+    justifyContent: "center",
     backgroundColor: style.colors.blue,
     borderRadius: 20,
     padding: 10,
   },
-  expensesWeekDiv: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
+  ButtonNewSpent: {
+    position: "relative",
+    bottom: "5%",
+    left: "60%",
+    zIndex: 1,
   },
 });
