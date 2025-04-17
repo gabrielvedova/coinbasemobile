@@ -20,7 +20,7 @@ export default (props) => {
       data={recentsExpenses}
       renderItem={renderItem}
       keyExtractor={(item) => item.id.toString()}
-      style={{ width: "100%" }}
+      style={{ width: "90%" }}
     />
   );
 };

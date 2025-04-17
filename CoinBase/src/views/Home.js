@@ -8,7 +8,6 @@ import {
   TouchableOpacity,
 } from "react-native";
 
-import AddGasto from "../components/Home/AddSpent";
 import style from "../Style";
 import ButtonExpensesWeek from "../components/Home/ButtonExpensesWeek";
 import AddSpent from "../components/Home/AddSpent";
@@ -33,7 +32,7 @@ export default (props) => {
           <ButtonExpensesWeek />
         </TouchableOpacity>
         <FindSpent />
-        <Text>Gastos Recentes:</Text>
+        <Text style={styles.titleRecentsExpensives}>Gastos Recentes:</Text>
         <ListRecentsExpenses />
       </View>
       <View style={styles.ButtonNewSpent}>
@@ -60,7 +59,6 @@ const styles = StyleSheet.create({
     flex: 4,
     backgroundColor: "#fff",
     alignItems: "center",
-    height: "100%",
   },
   perfil: {
     height: "80%",
@@ -83,5 +81,13 @@ const styles = StyleSheet.create({
     bottom: "5%",
     left: "60%",
     zIndex: 1,
+  },
+  titleRecentsExpensives: {
+    fontSize: 20,
+    marginBottom: 10,
+    marginTop: 20,
+    marginRight: 20,
+    fontWeight: "bold",
+    alignSelf: "flex-start",
   },
 });
