@@ -1,15 +1,15 @@
-import React from "react";
+import React, { use } from "react";
 import { Text, TouchableOpacity, Alert } from "react-native";
 import AntDesign from "@expo/vector-icons/AntDesign";
 import Style from "../../Style";
+import { useNavigation } from "@react-navigation/native";
 
 // cuidar depois que davi desenvolver a página de add gasto
 
 export default (props) => {
+  const navigation = useNavigation();
   const navigateToAddSpent = () => {
-    // Implement navigation to the Add Spent screen
-    // For example, using React Navigation:
-    Alert.alert("Navegar para a tela de adicionar gasto");
+    navigation.navigate("AddGasto");
   };
 
   return (

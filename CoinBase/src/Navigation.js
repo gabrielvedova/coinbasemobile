@@ -16,7 +16,11 @@ export default function Navigation() {
           component={Home}
           options={{ headerShown: false }}
         />
-        <Stack.Screen name="AddGasto" component={AddGasto} />
+        <Stack.Screen
+          name="AddGasto"
+          component={AddGasto}
+          options={{ title: "Novo Gasto" }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
