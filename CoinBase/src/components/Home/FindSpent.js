@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { TextInput, View, StyleSheet } from "react-native";
 import AntDesign from "@expo/vector-icons/AntDesign";
+import expenses from "../../data/Expenses.json";
 
-export default (props) => {
+export default ({ setIsSearch, setIdSearch }) => {
   const [search, setSearch] = useState("");
+
   return (
     <View style={styles.search}>
       <AntDesign name="search1" size={24} color="#8696BB" />
@@ -15,7 +17,16 @@ export default (props) => {
         }}
         placeholder="Pesquisar"
         placeholderTextColor="#808080"
-        onChangeText={(text) => setSearch(text)}
+        onChangeText={(text) => {
+          setSearch(text);
+          const filteredExpenses = expenses.filter((expense) =>
+            expense.title.toLowerCase().includes(text.toLowerCase())
+          );
+          setIsSearch(text.length > 0); // Define se está pesquisando
+          setIdSearch(
+            filteredExpenses.length > 0 ? filteredExpenses[0].id : null
+          ); // Define o ID do gasto encontrado
+        }}
         value={search}
       />
     </View>

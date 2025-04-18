@@ -9,6 +9,7 @@ export default (props) => {
 
   const renderItem = ({ item }) => (
     <View style={styles.item}>
+      <Text style={{ fontSize: 18, fontWeight: "bold" }}>{item.title}</Text>
       <Text>R${item.price}</Text>
       <Text>{item.category}</Text>
       <Text>{item.date}</Text>
@@ -16,12 +17,15 @@ export default (props) => {
   );
 
   return (
-    <FlatList
-      data={recentsExpenses}
-      renderItem={renderItem}
-      keyExtractor={(item) => item.id.toString()}
-      style={{ width: "90%" }}
-    />
+    <>
+      <Text style={styles.titleRecentsExpensives}>Gastos Recentes:</Text>
+      <FlatList
+        data={recentsExpenses}
+        renderItem={renderItem}
+        keyExtractor={(item) => item.id.toString()}
+        style={{ width: "90%" }}
+      />
+    </>
   );
 };
 
@@ -33,5 +37,13 @@ const styles = StyleSheet.create({
     marginHorizontal: 16,
     borderRadius: 10,
     width: "100%",
+  },
+  titleRecentsExpensives: {
+    fontSize: 20,
+    marginBottom: 10,
+    marginTop: 20,
+    marginRight: 20,
+    fontWeight: "bold",
+    alignSelf: "flex-start",
   },
 });

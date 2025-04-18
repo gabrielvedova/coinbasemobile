@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Text,
   View,
@@ -13,8 +13,12 @@ import ButtonExpensesWeek from "../components/Home/ButtonExpensesWeek";
 import AddSpent from "../components/Home/AddSpent";
 import FindSpent from "../components/Home/FindSpent";
 import ListRecentsExpenses from "../components/Home/ListRecentsExpenses";
+import GetExpenseFinded from "../components/Home/GetExpenseFinded";
 
 export default (props) => {
+  const [isSearch, setIsSearch] = useState(false);
+  const [idSearch, setIdSearch] = useState(null); // Inicializa como null
+
   return (
     <SafeAreaView style={{ flex: 1 }}>
       {/* HEADER */}
@@ -31,9 +35,12 @@ export default (props) => {
         <TouchableOpacity style={styles.expensesWeek}>
           <ButtonExpensesWeek />
         </TouchableOpacity>
-        <FindSpent />
-        <Text style={styles.titleRecentsExpensives}>Gastos Recentes:</Text>
-        <ListRecentsExpenses />
+        <FindSpent setIsSearch={setIsSearch} setIdSearch={setIdSearch} />
+        {isSearch ? (
+          <GetExpenseFinded idSearch={idSearch} />
+        ) : (
+          <ListRecentsExpenses />
+        )}
       </View>
       <View style={styles.ButtonNewSpent}>
         <AddSpent />
@@ -81,13 +88,5 @@ const styles = StyleSheet.create({
     bottom: "5%",
     left: "60%",
     zIndex: 1,
-  },
-  titleRecentsExpensives: {
-    fontSize: 20,
-    marginBottom: 10,
-    marginTop: 20,
-    marginRight: 20,
-    fontWeight: "bold",
-    alignSelf: "flex-start",
   },
 });
