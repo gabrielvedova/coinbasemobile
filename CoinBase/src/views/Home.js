@@ -6,6 +6,7 @@ import {
   SafeAreaView,
   StatusBar,
   TouchableOpacity,
+  ScrollView,
 } from "react-native";
 
 import style from "../Style";
@@ -21,31 +22,33 @@ export default (props) => {
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      {/* HEADER */}
-      <View style={styles.menu}>
-        <View style={{ width: "50%" }}>
-          <Text style={{ fontSize: 18, color: "#808080" }}>Olá,</Text>
-          <Text style={styles.textmenu}>Davi Gomes</Text>
+      <ScrollView showsVerticalScrollIndicator={false}>
+        {/* HEADER */}
+        <View style={styles.menu}>
+          <View style={{ width: "50%" }}>
+            <Text style={{ fontSize: 18, color: "#808080" }}>Olá,</Text>
+            <Text style={styles.textmenu}>Davi Gomes</Text>
+          </View>
+          <View style={styles.perfil}></View>
         </View>
-        <View style={styles.perfil}></View>
-      </View>
 
-      {/* HOME */}
-      <View style={styles.home}>
-        <TouchableOpacity style={styles.expensesWeek}>
-          <ButtonExpensesWeek />
-        </TouchableOpacity>
-        <FindSpent setIsSearch={setIsSearch} setIdSearch={setIdSearch} />
-        {isSearch ? (
-          <GetExpenseFinded idSearch={idSearch} />
-        ) : (
-          <ListRecentsExpenses />
-        )}
-      </View>
+        {/* HOME */}
+        <View style={styles.home}>
+          <TouchableOpacity style={styles.expensesWeek}>
+            <ButtonExpensesWeek />
+          </TouchableOpacity>
+          <FindSpent setIsSearch={setIsSearch} setIdSearch={setIdSearch} />
+          {isSearch ? (
+            <GetExpenseFinded idSearch={idSearch} />
+          ) : (
+            <ListRecentsExpenses />
+          )}
+        </View>
+        <StatusBar style="auto" />
+      </ScrollView>
       <View style={styles.ButtonNewSpent}>
         <AddSpent />
       </View>
-      <StatusBar style="auto" />
     </SafeAreaView>
   );
 };
@@ -53,6 +56,7 @@ export default (props) => {
 const styles = StyleSheet.create({
   menu: {
     flex: 1,
+    height: 120,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
@@ -84,9 +88,9 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   ButtonNewSpent: {
-    position: "relative",
-    bottom: "5%",
-    left: "60%",
-    zIndex: 1,
+    position: "absolute",
+    bottom: 30,
+    right: 10,
+    zIndex: 10,
   },
 });

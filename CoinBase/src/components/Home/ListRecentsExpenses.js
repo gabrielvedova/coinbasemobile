@@ -8,7 +8,7 @@ export default (props) => {
     .slice(0, 5);
 
   const renderItem = ({ item }) => (
-    <View style={styles.item}>
+    <View style={styles.item} key={item.id}>
       <Text style={{ fontSize: 18, fontWeight: "bold" }}>{item.title}</Text>
       <Text>R${item.price}</Text>
       <Text>{item.category}</Text>
@@ -19,12 +19,9 @@ export default (props) => {
   return (
     <>
       <Text style={styles.titleRecentsExpensives}>Gastos Recentes:</Text>
-      <FlatList
-        data={recentsExpenses}
-        renderItem={renderItem}
-        keyExtractor={(item) => item.id.toString()}
-        style={{ width: "90%" }}
-      />
+      <View style={{ width: "90%" }}>
+        {recentsExpenses.map((item) => renderItem({ item }))}
+      </View>
     </>
   );
 };
