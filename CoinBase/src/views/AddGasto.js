@@ -12,7 +12,7 @@ import {
   ToastAndroid,
 } from "react-native";
 
-export default function AddGasto() {
+export default (props) => {
   const [valor, setValor] = useState("");
 
   const handleChange = (text) => {
@@ -71,7 +71,7 @@ export default function AddGasto() {
       </KeyboardAvoidingView>
     </SafeAreaView>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {

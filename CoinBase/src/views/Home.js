@@ -21,7 +21,7 @@ export default (props) => {
   const [idSearch, setIdSearch] = useState(null); // Inicializa como null
 
   return (
-    <SafeAreaView style={{ flex: 1 }}>
+    <SafeAreaView style={style.style.container}>
       <ScrollView showsVerticalScrollIndicator={false}>
         {/* HEADER */}
         <View style={styles.menu}>
