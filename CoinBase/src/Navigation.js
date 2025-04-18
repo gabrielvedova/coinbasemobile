@@ -4,6 +4,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import Home from "./views/Home";
 import AddGasto from "./views/AddGasto";
+import ExpenseDetails from "./views/ExpenseDetails";
 
 const Stack = createNativeStackNavigator();
 
@@ -21,6 +22,7 @@ export default function Navigation() {
           component={AddGasto}
           options={{ title: "Novo Gasto" }}
         />
+        <Stack.Screen name="ExpenseDetails" component={ExpenseDetails} />
       </Stack.Navigator>
     </NavigationContainer>
   );

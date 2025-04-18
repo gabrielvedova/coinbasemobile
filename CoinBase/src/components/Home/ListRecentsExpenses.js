@@ -1,19 +1,26 @@
+// filepath: /home/vedova/Documentos/coinbasemobile/CoinBase/src/components/Home/ListRecentsExpenses.js
 import React from "react";
-import { Text, View, FlatList, StyleSheet } from "react-native";
+import { Text, View, TouchableOpacity, StyleSheet } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 import expenses from "../../data/Expenses.json";
 
-export default (props) => {
+export default function ListRecentsExpenses() {
+  const navigation = useNavigation();
+
   const recentsExpenses = expenses
     .sort((a, b) => new Date(b.date) - new Date(a.date))
     .slice(0, 5);
 
   const renderItem = ({ item }) => (
-    <View style={styles.item} key={item.id}>
+    <TouchableOpacity
+      style={styles.item}
+      onPress={() => navigation.navigate("ExpenseDetails", { expense: item })}
+    >
       <Text style={{ fontSize: 18, fontWeight: "bold" }}>{item.title}</Text>
       <Text>R${item.price}</Text>
       <Text>{item.category}</Text>
       <Text>{item.date}</Text>
-    </View>
+    </TouchableOpacity>
   );
 
   return (
@@ -24,7 +31,7 @@ export default (props) => {
       </View>
     </>
   );
-};
+}
 
 const styles = StyleSheet.create({
   item: {
