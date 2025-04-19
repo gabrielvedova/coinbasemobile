@@ -1,0 +1,84 @@
+import React from "react";
+import { View, StyleSheet } from "react-native";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import StackNavigatior from "./StackNavigatior";
+import Reports from "./views/Reports";
+import ExpensesHistory from "./views/ExpensesHistory";
+
+import Style from "./Style";
+
+import Ionicons from "@expo/vector-icons/Ionicons";
+
+const Tab = createBottomTabNavigator();
+
+export default (props) => {
+  return (
+    <Tab.Navigator
+      screenOptions={{
+        headerShown: false,
+        tabBarStyle: {
+          backgroundColor: "#FAFAFA",
+          height: 60,
+          justifyContent: "center", // Centraliza o conteúdo da barra
+          alignItems: "center",
+        },
+        tabBarIconStyle: {
+          justifyContent: "center",
+          alignItems: "center",
+          height: "100%",
+        },
+      }}
+    >
+      <Tab.Screen
+        name="HomeStack"
+        component={StackNavigatior}
+        options={{
+          tabBarShowLabel: false,
+          tabBarIcon: () => (
+            <View style={styles.iconWrapper}>
+              <Ionicons name="home" size={28} color={Style.colors.blue} />
+            </View>
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="History"
+        component={ExpensesHistory}
+        options={{
+          tabBarShowLabel: false,
+          tabBarIcon: () => (
+            <View style={styles.iconWrapper}>
+              <Ionicons name="calendar" size={28} color={Style.colors.blue} />
+            </View>
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Reports"
+        component={Reports}
+        options={{
+          tabBarShowLabel: false,
+          tabBarIcon: () => (
+            <View style={styles.iconWrapper}>
+              <Ionicons
+                name="stats-chart"
+                size={28}
+                color={Style.colors.blue}
+              />
+            </View>
+          ),
+        }}
+      />
+    </Tab.Navigator>
+  );
+};
+
+const styles = StyleSheet.create({
+  iconWrapper: {
+    flex: 1,
+    height: "100%",
+    justifyContent: "center",
+    alignItems: "center",
+    //marginTop: 5,
+  },
+});

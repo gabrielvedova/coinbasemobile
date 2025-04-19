@@ -1,17 +1,13 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, SafeAreaView } from "react-native";
 
-import style from "./Style";
-import Home from "./views/Home";
-import AddGasto from "./views/AddGasto";
-import Navigation from "./Navigation";
+import StackNavigatior from "./StackNavigatior";
+import TabNavigator from "./TabNavigator";
+import { NavigationContainer } from "@react-navigation/native";
 
 export default function App() {
-  return <Navigation />;
+  return (
+    <NavigationContainer>
+      <TabNavigator />
+    </NavigationContainer>
+  );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    ...style.style.container,
-  },
-});

@@ -15,6 +15,7 @@ export default function ListRecentsExpenses() {
     <TouchableOpacity
       style={styles.item}
       onPress={() => navigation.navigate("ExpenseDetails", { expense: item })}
+      key={item.id}
     >
       <Text style={{ fontSize: 18, fontWeight: "bold" }}>{item.title}</Text>
       <Text>R${item.price}</Text>
@@ -26,7 +27,7 @@ export default function ListRecentsExpenses() {
   return (
     <>
       <Text style={styles.titleRecentsExpensives}>Gastos Recentes:</Text>
-      <View style={{ width: "90%" }}>
+      <View style={{ width: "100%" }}>
         {recentsExpenses.map((item) => renderItem({ item }))}
       </View>
     </>
