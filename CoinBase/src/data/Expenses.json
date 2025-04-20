@@ -6,7 +6,7 @@
     "price": 10.0,
     "date": "2025-03-25",
     "typePayment": "Cartão 1",
-    "category": "Food"
+    "category": "Comida"
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@
     "price": 25.0,
     "date": "2025-04-06",
     "typePayment": "Dinheiro",
-    "category": "Transport"
+    "category": "Transporte"
   },
   {
     "id": 3,
@@ -24,7 +24,7 @@
     "price": 30.0,
     "date": "2025-04-14",
     "typePayment": "Pix Nubank",
-    "category": "Food"
+    "category": "Comida"
   },
   {
     "id": 4,
@@ -33,7 +33,7 @@
     "price": 50.0,
     "date": "2025-04-17",
     "typePayment": "Cartão 1",
-    "category": "Transport"
+    "category": "Transporte"
   },
   {
     "id": 5,
@@ -42,7 +42,7 @@
     "price": 15.0,
     "date": "2025-04-17",
     "typePayment": "Cartão 2",
-    "category": "Food"
+    "category": "Comida"
   },
   {
     "id": 6,
@@ -51,7 +51,7 @@
     "price": 12.0,
     "date": "2025-04-18",
     "typePayment": "Cartão 2",
-    "category": "Food"
+    "category": "Comida"
   },
   {
     "id": 7,
@@ -60,51 +60,213 @@
     "price": 100.0,
     "date": "2025-04-20",
     "typePayment": "Dinheiro",
-    "category": "Transport"
+    "category": "Transporte"
   },
   {
     "id": 8,
     "title": "Cinema",
     "description": "Ingressos para o cinema",
     "price": 40.0,
-    "date": "2025-04-22",
+    "date": "2025-04-19",
     "typePayment": "Cartão 1",
-    "category": "Entertainment"
+    "category": "Lazer"
   },
   {
     "id": 9,
     "title": "Livros",
     "description": "Livros de programação",
     "price": 80.0,
-    "date": "2025-04-25",
+    "date": "2025-04-15",
     "typePayment": "Cartão 2",
-    "category": "Education"
+    "category": "Educação"
   },
   {
     "id": 10,
     "title": "Assinatura Netflix",
     "description": "Mensalidade da Netflix",
     "price": 45.0,
-    "date": "2025-04-28",
+    "date": "2025-04-10",
     "typePayment": "Cartão 1",
-    "category": "Entertainment"
+    "category": "Lazer"
   },
   {
     "id": 11,
     "title": "Curso de Programação",
     "description": "Curso online de programação",
     "price": 200.0,
-    "date": "2025-05-01",
+    "date": "2025-04-05",
     "typePayment": "Cartão 2",
-    "category": "Education"
+    "category": "Educação"
   },
   {
     "id": 12,
     "title": "Jantar em Restaurante",
     "description": "Jantar em um restaurante italiano",
     "price": 120.0,
-    "date": "2025-05-03",
+    "date": "2025-04-03",
     "typePayment": "Dinheiro",
-    "category": "Food"
+    "category": "Comida"
+  },
+  {
+    "id": 13,
+    "title": "Compra de Frutas",
+    "description": "Frutas para a semana",
+    "price": 35.0,
+    "date": "2025-04-02",
+    "typePayment": "Pix Nubank",
+    "category": "Comida"
+  },
+  {
+    "id": 14,
+    "title": "Academia",
+    "description": "Mensalidade da academia",
+    "price": 90.0,
+    "date": "2025-03-30",
+    "typePayment": "Cartão 1",
+    "category": "Saúde"
+  },
+  {
+    "id": 15,
+    "title": "Conserto de Eletrodoméstico",
+    "description": "Conserto do micro-ondas",
+    "price": 150.0,
+    "date": "2025-03-28",
+    "typePayment": "Dinheiro",
+    "category": "Casa"
+  },
+  {
+    "id": 16,
+    "title": "Café da Manhã",
+    "description": "Café e pão de queijo",
+    "price": 8.0,
+    "date": "2025-03-27",
+    "typePayment": "Cartão 2",
+    "category": "Comida"
+  },
+  {
+    "id": 17,
+    "title": "Passagem de Ônibus",
+    "description": "Passagem para viagem",
+    "price": 120.0,
+    "date": "2025-03-26",
+    "typePayment": "Pix Nubank",
+    "category": "Transporte"
+  },
+  {
+    "id": 18,
+    "title": "Show de Música",
+    "description": "Ingressos para show",
+    "price": 200.0,
+    "date": "2025-03-25",
+    "typePayment": "Cartão 1",
+    "category": "Lazer"
+  },
+  {
+    "id": 19,
+    "title": "Material Escolar",
+    "description": "Cadernos e canetas",
+    "price": 50.0,
+    "date": "2025-03-24",
+    "typePayment": "Dinheiro",
+    "category": "Educação"
+  },
+  {
+    "id": 20,
+    "title": "Aluguel",
+    "description": "Pagamento do aluguel",
+    "price": 1200.0,
+    "date": "2025-03-23",
+    "typePayment": "Pix Nubank",
+    "category": "Casa"
+  },
+  {
+    "id": 21,
+    "title": "Supermercado",
+    "description": "Compras do mês",
+    "price": 500.0,
+    "date": "2025-03-22",
+    "typePayment": "Cartão 2",
+    "category": "Casa"
+  },
+  {
+    "id": 22,
+    "title": "Barbearia",
+    "description": "Corte de cabelo",
+    "price": 30.0,
+    "date": "2025-03-21",
+    "typePayment": "Dinheiro",
+    "category": "Outros"
+  },
+  {
+    "id": 23,
+    "title": "Farmácia",
+    "description": "Remédios",
+    "price": 60.0,
+    "date": "2025-03-20",
+    "typePayment": "Cartão 1",
+    "category": "Saúde"
+  },
+  {
+    "id": 24,
+    "title": "Jogo de Tabuleiro",
+    "description": "Jogo para lazer",
+    "price": 150.0,
+    "date": "2025-03-19",
+    "typePayment": "Cartão 2",
+    "category": "Lazer"
+  },
+  {
+    "id": 25,
+    "title": "Reforma da Casa",
+    "description": "Pintura e reparos",
+    "price": 800.0,
+    "date": "2025-03-18",
+    "typePayment": "Pix Nubank",
+    "category": "Casa"
+  },
+  {
+    "id": 26,
+    "title": "Almoço em Família",
+    "description": "Almoço em restaurante",
+    "price": 200.0,
+    "date": "2025-03-17",
+    "typePayment": "Cartão 1",
+    "category": "Comida"
+  },
+  {
+    "id": 27,
+    "title": "Curso de Inglês",
+    "description": "Mensalidade do curso",
+    "price": 300.0,
+    "date": "2025-03-16",
+    "typePayment": "Cartão 2",
+    "category": "Educação"
+  },
+  {
+    "id": 28,
+    "title": "Manutenção do Carro",
+    "description": "Troca de óleo e revisão",
+    "price": 400.0,
+    "date": "2025-03-15",
+    "typePayment": "Dinheiro",
+    "category": "Transporte"
+  },
+  {
+    "id": 29,
+    "title": "Assinatura Spotify",
+    "description": "Mensalidade do Spotify",
+    "price": 20.0,
+    "date": "2025-03-14",
+    "typePayment": "Cartão 1",
+    "category": "Lazer"
+  },
+  {
+    "id": 30,
+    "title": "Doação",
+    "description": "Doação para caridade",
+    "price": 100.0,
+    "date": "2025-03-13",
+    "typePayment": "Pix Nubank",
+    "category": "Outros"
   }
 ]

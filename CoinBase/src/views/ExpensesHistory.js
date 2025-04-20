@@ -15,7 +15,7 @@ import GetExpenseFinded from "../components/GetExpenseFinded";
 
 export default (props) => {
   const [openFilter, setOpenFilter] = useState(false);
-  const [useFilter, setUseFilter] = useState(0);
+  const [useFilter, setUseFilter] = useState(3);
   const [idSearch, setIdSearch] = useState(null);
   const [isSearch, setIsSearch] = useState(false);
   return (
@@ -52,7 +52,7 @@ export default (props) => {
           {isSearch ? (
             <GetExpenseFinded idSearch={idSearch} />
           ) : (
-            <ListExpense />
+            <ListExpense filterOption={useFilter} />
           )}
         </View>
       </ScrollView>
