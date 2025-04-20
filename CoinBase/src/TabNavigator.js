@@ -1,13 +1,13 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import StackNavigatior from "./StackNavigatior";
 import Reports from "./views/Reports";
 import ExpensesHistory from "./views/ExpensesHistory";
 
 import Style from "./Style";
 
 import Ionicons from "@expo/vector-icons/Ionicons";
+import Home from "./views/Home";
 
 const Tab = createBottomTabNavigator();
 
@@ -30,8 +30,8 @@ export default (props) => {
       }}
     >
       <Tab.Screen
-        name="HomeStack"
-        component={StackNavigatior}
+        name="Home"
+        component={Home}
         options={{
           tabBarShowLabel: false,
           tabBarIcon: () => (

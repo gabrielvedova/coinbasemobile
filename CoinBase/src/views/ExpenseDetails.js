@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
-export default function ExpenseDetails({ route }) {
+export default ({ route }) => {
   const { expense } = route.params; // Recebe os dados do gasto via navegação
 
   return (
@@ -12,7 +12,7 @@ export default function ExpenseDetails({ route }) {
       <Text style={styles.text}>Data: {expense.date}</Text>
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { TextInput, View, StyleSheet } from "react-native";
 import AntDesign from "@expo/vector-icons/AntDesign";
-import expenses from "../../data/Expenses.json";
+import expenses from "../data/Expenses.json";
 
 export default ({ setIsSearch, setIdSearch }) => {
   const [search, setSearch] = useState("");

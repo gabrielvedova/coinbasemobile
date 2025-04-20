@@ -1,13 +1,14 @@
 import { StatusBar } from "expo-status-bar";
-
-import StackNavigatior from "./StackNavigatior";
-import TabNavigator from "./TabNavigator";
 import { NavigationContainer } from "@react-navigation/native";
+import StackNavigatior from "./StackNavigatior";
+import { SafeAreaView } from "react-native-safe-area-context";
+import Navigation from "./Navigation";
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <TabNavigator />
-    </NavigationContainer>
+    <SafeAreaView style={{ flex: 1 }}>
+      <Navigation />
+      <StatusBar style="auto" />
+    </SafeAreaView>
   );
 }

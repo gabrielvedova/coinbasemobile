@@ -12,7 +12,7 @@ import {
 import style from "../Style";
 import ButtonExpensesWeek from "../components/Home/ButtonExpensesWeek";
 import AddSpent from "../components/Home/AddSpent";
-import FindSpent from "../components/Home/FindSpent";
+import FindSpent from "../components/FindSpent";
 import ListRecentsExpenses from "../components/Home/ListRecentsExpenses";
 import GetExpenseFinded from "../components/Home/GetExpenseFinded";
 
