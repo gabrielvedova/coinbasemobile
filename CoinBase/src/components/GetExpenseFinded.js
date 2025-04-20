@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, View, StyleSheet } from "react-native";
-import expenses from "../../data/Expenses.json";
+import expenses from "../data/Expenses.json";
 
 export default ({ idSearch }) => {
   // Encontra o gasto com base no idSearch

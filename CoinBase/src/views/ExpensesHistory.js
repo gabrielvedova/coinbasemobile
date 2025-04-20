@@ -11,15 +11,18 @@ import FindSpent from "../components/FindSpent";
 import ListExpense from "../components/ExpenseHistory/ListExpense";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import FilterOptions from "../components/ExpenseHistory/FilterOptions";
+import GetExpenseFinded from "../components/GetExpenseFinded";
 
 export default (props) => {
   const [openFilter, setOpenFilter] = useState(false);
   const [useFilter, setUseFilter] = useState(0);
+  const [idSearch, setIdSearch] = useState(null);
+  const [isSearch, setIsSearch] = useState(false);
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.containerSearch}>
         <View style={styles.containerSearchPrincipal}>
-          <FindSpent />
+          <FindSpent setIsSearch={setIsSearch} setIdSearch={setIdSearch} />
           <TouchableOpacity onPress={() => setOpenFilter(!openFilter)}>
             <MaterialIcons
               name={openFilter ? "filter-list-off" : "filter-list"}
@@ -36,8 +39,22 @@ export default (props) => {
           />
         ) : null}
       </View>
-      <ScrollView style={{ width: "90%" }} showsVerticalScrollIndicator={false}>
-        <ListExpense />
+      <ScrollView
+        style={{ width: "100%" }}
+        showsVerticalScrollIndicator={false}
+      >
+        <View
+          style={{
+            width: "90%",
+            alignItems: "center",
+          }}
+        >
+          {isSearch ? (
+            <GetExpenseFinded idSearch={idSearch} />
+          ) : (
+            <ListExpense />
+          )}
+        </View>
       </ScrollView>
     </SafeAreaView>
   );

@@ -14,7 +14,7 @@ import ButtonExpensesWeek from "../components/Home/ButtonExpensesWeek";
 import AddSpent from "../components/Home/AddSpent";
 import FindSpent from "../components/FindSpent";
 import ListRecentsExpenses from "../components/Home/ListRecentsExpenses";
-import GetExpenseFinded from "../components/Home/GetExpenseFinded";
+import GetExpenseFinded from "../components/GetExpenseFinded";
 
 export default (props) => {
   const [isSearch, setIsSearch] = useState(false);
