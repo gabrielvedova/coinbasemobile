@@ -1,15 +1,40 @@
-import React from "react";
-import { View, StyleSheet, ScrollView, SafeAreaView } from "react-native";
+import React, { useState } from "react";
+import {
+  View,
+  Text,
+  StyleSheet,
+  ScrollView,
+  SafeAreaView,
+  TouchableOpacity,
+} from "react-native";
 import FindSpent from "../components/FindSpent";
 import ListExpense from "../components/ExpenseHistory/ListExpense";
-import Ionicons from "@expo/vector-icons/Ionicons";
+import MaterialIcons from "@expo/vector-icons/MaterialIcons";
+import FilterOptions from "../components/ExpenseHistory/FilterOptions";
 
 export default (props) => {
+  const [openFilter, setOpenFilter] = useState(false);
+  const [useFilter, setUseFilter] = useState(0);
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.containarSearch}>
-        <FindSpent />
-        <Ionicons name="filter" size={24} color="black" />
+      <View style={styles.containerSearch}>
+        <View style={styles.containerSearchPrincipal}>
+          <FindSpent />
+          <TouchableOpacity onPress={() => setOpenFilter(!openFilter)}>
+            <MaterialIcons
+              name={openFilter ? "filter-list-off" : "filter-list"}
+              size={28}
+              color="black"
+            />
+          </TouchableOpacity>
+        </View>
+        {openFilter ? (
+          <FilterOptions
+            useFilter={useFilter}
+            setUseFilter={setUseFilter}
+            setOpenFilter={setOpenFilter}
+          />
+        ) : null}
       </View>
       <ScrollView style={{ width: "90%" }} showsVerticalScrollIndicator={false}>
         <ListExpense />
@@ -23,12 +48,17 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
   },
-  containarSearch: {
-    flexDirection: "row",
+  containerSearch: {
     justifyContent: "space-between",
     alignItems: "center",
     width: "100%",
     paddingHorizontal: 20,
     marginTop: 20,
+  },
+  containerSearchPrincipal: {
+    flexDirection: "row",
+    alignItems: "center",
+    width: "100%",
+    justifyContent: "space-between",
   },
 });
