@@ -14,7 +14,7 @@ export default (props) => {
 
   return (
     <TouchableOpacity onPress={navigateToAddSpent}>
-      <AntDesign name="pluscircle" size={100} color={Style.colors.blue} />
+      <AntDesign name="pluscircle" size={90} color={Style.colors.blue} />
     </TouchableOpacity>
   );
 };

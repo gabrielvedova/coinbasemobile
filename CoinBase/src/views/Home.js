@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
   ButtonNewSpent: {
     position: "absolute",
     bottom: 30,
-    right: 10,
+    right: 20,
     zIndex: 10,
   },
 });
