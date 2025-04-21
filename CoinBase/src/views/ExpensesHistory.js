@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import {
   View,
   Text,
@@ -7,17 +7,19 @@ import {
   SafeAreaView,
   TouchableOpacity,
 } from "react-native";
+import { FilterContext } from "../context/FilterContext";
 import FindSpent from "../components/FindSpent";
 import ListExpense from "../components/ExpenseHistory/ListExpense";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import FilterOptions from "../components/ExpenseHistory/FilterOptions";
 import GetExpenseFinded from "../components/GetExpenseFinded";
 
-export default (props) => {
+export default function ExpensesHistory() {
+  const { useFilter, setUseFilter } = useContext(FilterContext);
   const [openFilter, setOpenFilter] = useState(false);
-  const [useFilter, setUseFilter] = useState(3);
   const [idSearch, setIdSearch] = useState(null);
   const [isSearch, setIsSearch] = useState(false);
+
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.containerSearch}>
@@ -58,7 +60,7 @@ export default (props) => {
       </ScrollView>
     </SafeAreaView>
   );
-};
+}
 
 const styles = StyleSheet.create({
   container: {

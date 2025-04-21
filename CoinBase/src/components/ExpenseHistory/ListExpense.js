@@ -12,7 +12,21 @@ export default ({ filterOption }) => {
     const yesterday = new Date(today);
     yesterday.setDate(today.getDate() - 1); // Define a data de ontem
 
-    if (useFilter === 1) {
+    if (useFilter === 0) {
+      const startOfWeek = new Date(today);
+      startOfWeek.setDate(today.getDate() - today.getDay() - 7); // Domingo da semana atual ou anterior
+      startOfWeek.setHours(0, 0, 0, 0);
+
+      const endOfWeek = new Date(startOfWeek);
+      endOfWeek.setDate(startOfWeek.getDate() + 6); // Sábado da mesma semana
+      endOfWeek.setHours(23, 59, 59, 999);
+
+      // Retorna as despesas da semana
+      return expenses.filter((expense) => {
+        const expenseDate = new Date(expense.date + "T00:00:00"); // Converte o formato yyyy-mm-dd para Date
+        return expenseDate >= startOfWeek && expenseDate <= endOfWeek;
+      });
+    } else if (useFilter === 1) {
       // Hoje
       return expenses.filter((expense) => {
         const expenseDate = new Date(expense.date + "T00:00:00"); // Converte o formato yyyy-mm-dd para Date
@@ -130,9 +144,16 @@ export default ({ filterOption }) => {
           <Text style={{ fontWeight: "bold", fontSize: 18, marginBottom: 10 }}>
             {filterOption === 1 ? "Hoje" : "Ontem"}
           </Text>
-          <Text>{recentsExpenses.map((item) => renderItem({ item }))}</Text>
+          {recentsExpenses.map((item) => renderItem({ item }))}
         </>
-      ) : null}
+      ) : (
+        <>
+          <Text style={{ fontWeight: "bold", fontSize: 18, marginBottom: 10 }}>
+            {filterOption === 0 ? "Semana" : null}
+          </Text>
+          {recentsExpenses.map((item) => renderItem({ item }))}
+        </>
+      )}
     </View>
   );
 };

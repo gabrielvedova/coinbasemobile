@@ -1,17 +1,16 @@
+// filepath: /home/vedova/Documentos/coinbasemobile/CoinBase/src/TabNavigator.js
 import React from "react";
 import { View, StyleSheet } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Reports from "./views/Reports";
 import ExpensesHistory from "./views/ExpensesHistory";
-
 import Style from "./Style";
-
 import Ionicons from "@expo/vector-icons/Ionicons";
 import Home from "./views/Home";
 
 const Tab = createBottomTabNavigator();
 
-export default (props) => {
+export default () => {
   return (
     <Tab.Navigator
       screenOptions={{
@@ -19,7 +18,7 @@ export default (props) => {
         tabBarStyle: {
           backgroundColor: "#FAFAFA",
           height: 60,
-          justifyContent: "center", // Centraliza o conteúdo da barra
+          justifyContent: "center",
           alignItems: "center",
         },
         tabBarIconStyle: {
@@ -79,6 +78,5 @@ const styles = StyleSheet.create({
     height: "100%",
     justifyContent: "center",
     alignItems: "center",
-    //marginTop: 5,
   },
 });

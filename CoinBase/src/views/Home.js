@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import {
   Text,
   View,
@@ -8,17 +8,20 @@ import {
   TouchableOpacity,
   ScrollView,
 } from "react-native";
-
+import { FilterContext } from "../context/FilterContext";
 import style from "../Style";
 import ButtonExpensesWeek from "../components/Home/ButtonExpensesWeek";
 import AddSpent from "../components/Home/AddSpent";
 import FindSpent from "../components/FindSpent";
 import ListRecentsExpenses from "../components/Home/ListRecentsExpenses";
 import GetExpenseFinded from "../components/GetExpenseFinded";
+import { useNavigation } from "@react-navigation/native";
 
-export default (props) => {
+export default function Home() {
+  const { useFilter, setUseFilter } = useContext(FilterContext);
   const [isSearch, setIsSearch] = useState(false);
-  const [idSearch, setIdSearch] = useState(null); // Inicializa como null
+  const [idSearch, setIdSearch] = useState(null);
+  const navigation = useNavigation();
 
   return (
     <SafeAreaView style={style.style.container}>
@@ -34,7 +37,13 @@ export default (props) => {
 
         {/* HOME */}
         <View style={styles.home}>
-          <TouchableOpacity style={styles.expensesWeek}>
+          <TouchableOpacity
+            style={styles.expensesWeek}
+            onPress={() => {
+              setUseFilter(0);
+              navigation.navigate("History");
+            }}
+          >
             <ButtonExpensesWeek />
           </TouchableOpacity>
           <FindSpent setIsSearch={setIsSearch} setIdSearch={setIdSearch} />
@@ -51,7 +60,7 @@ export default (props) => {
       </View>
     </SafeAreaView>
   );
-};
+}
 
 const styles = StyleSheet.create({
   menu: {

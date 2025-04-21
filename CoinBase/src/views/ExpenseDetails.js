@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
 export default ({ route }) => {
-  const { expense } = route.params; // Recebe os dados do gasto via navegação
+  const { expense } = route.params;
 
   return (
     <View style={styles.container}>

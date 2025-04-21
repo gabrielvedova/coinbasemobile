@@ -1,10 +1,16 @@
-import { SafeAreaView } from "react-native-safe-area-context";
-import Navigation from "./Navigation";
+import React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import TabNavigator from "./TabNavigator";
+import { FilterProvider } from "./context/FilterContext";
+import StackNavigatior from "./StackNavigatior";
 
 export default function App() {
   return (
-    <SafeAreaView style={{ flex: 1 }}>
-      <Navigation />
-    </SafeAreaView>
+    <FilterProvider>
+      <NavigationContainer>
+        <StackNavigatior />
+        {/* <TabNavigator /> */}
+      </NavigationContainer>
+    </FilterProvider>
   );
 }
